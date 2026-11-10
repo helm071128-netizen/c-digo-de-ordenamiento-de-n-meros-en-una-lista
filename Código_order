@@ -1,0 +1,13 @@
+#Código para el ordenamiento de números de la siguiente lista:
+lista = [34, 18, 42, 12, 29]
+n = len(lista)
+for i in range (n-1):
+    indiceminimo = i
+
+    for j in range(i+1, n):
+        if lista[j] < lista[indiceminimo]:
+           indiceminimo = j
+    if indiceminimo != i:
+        lista[i], lista[indiceminimo] = lista[indiceminimo], lista[i]
+
+print("lista ordenada: ", lista)
